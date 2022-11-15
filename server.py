@@ -1,5 +1,5 @@
 from flask_app import app
-from flask_app.controllers import paintings, users
+from flask_app.controllers import questions, users
 
 
 if __name__ == '__main__':

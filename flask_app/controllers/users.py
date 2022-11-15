@@ -34,7 +34,7 @@ def register():
     session['first_name'] = request.form['first_name']
     session['last_name'] = request.form['last_name']
 
-    return redirect('/paintings')
+    return redirect('/access')
     
 
 #! Read and Verfy AKA Login
@@ -55,7 +55,7 @@ def login():
     # TODO log in user
     session['user_id'] = user.id
     session['first_name'] = user.first_name
-    return redirect('/paintings')
+    return redirect('/access')
 
 #____________________________________________
 

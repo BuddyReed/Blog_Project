@@ -39,6 +39,9 @@
                         <a href="/community" class="nav-link"><h5>Artist Community</h5></a>
                     </li>
                     <li class="nav-item">
+                        <a href="/access" class="nav-link"><h5>All Access</h5></a>
+                    </li>
+                    <li class="nav-item">
                         <a href="/thespot" class="nav-link"> <h5>Sign Up</h5></a>
                     </li>
                     <li class="nav-item">
@@ -56,10 +59,36 @@
             </div>
         </div>
     </section>
+    
     <section>
         <div class="container">
-
-        </div>
+            <div class="row">
+                <div class="modal" tabindex="-1" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header bg-danger text-light">
+                            <h5 class="modal-title">Ask The Community A Question?</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div>
+                                        <label class="form-label"></label>
+                                        <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a class="btn btn-dark" href="">Share Question</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <a class="btn btn-dark" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Start Convo</a>
+                </div>
+            </div>
     </section>
 
 <!-- JavaScript Bundle with Popper -->

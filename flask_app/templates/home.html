@@ -39,11 +39,20 @@
                         <a href="/community" class="nav-link"><h5>Artist Community</h5></a>
                     </li>
                     <li class="nav-item">
+                        <a href="/access" class="nav-link"><h5>All Access</h5></a>
+                    </li>
+                    <li class="nav-item">
                         <a href="/thespot" class="nav-link"> <h5>Sign Up</h5></a>
                     </li>
+                    {% if "user_id" is in session %}                        
+                    <li class="nav-item">
+                        <a href="/thespot" class="nav-link"> <h5>Logout</h5></a>
+                    </li>
+                    {% else %}
                     <li class="nav-item">
                         <a href="/thespot" class="nav-link"> <h5>Login</h5></a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -161,7 +170,7 @@
                             <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
                             <p class="ms-4">- Get access to our 500k plus email mailing list</p>
                             <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
-                            <a class="btn btn-danger ms-4" href="">Get Featured</a>
+                            <a class="btn btn-danger ms-4" href="/access">Get Featured</a>
                         </div>
                     </div>
                 </div>
