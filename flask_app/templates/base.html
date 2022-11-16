@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+</head>
+<body>
+    <!-- NavBar  -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand mb-0 h1">
+            <img 
+            class="d-inline-block align-top"
+            src="{{url_for('static', filename='images/White_logo.png')}}" alt="" width="100px" height="100px">
+                </a>
+
+            <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navmenu"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link"><h5>Home</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/allblogs" class="nav-link"> <h5>All Blogs</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/community" class="nav-link"><h5>Artist Community</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/access" class="nav-link"><h5>All Access</h5></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/thespot" class="nav-link"> <h5>Sign Up</h5></a>
+                    </li>
+                    {% if "user_id" is in session %}                        
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link"> <h5>Logout</h5></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="/thespot" class="nav-link"> <h5>Login</h5></a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+
+    {% block feature %}
+
+    {% endblock feature %}
+    <!-- Latest Blog and Mag -->
+
+    {% block latest %}
+    {% endblock latest %}
+    <!-- Playlist -->
+    {% block playlist %}
+    {% endblock playlist %}
+    <!-- Submit Music -->
+    {% block submit %}
+    {% endblock submit %}
+    
+    
+    
+    <!-- <img class="img-fluid" src="{{url_for('static', filename='images/Welcome.png')}}" alt="" height="100px">
+    <div class="container-fluid">
+        <div class="welcome">
+        </div>
+    </div> -->
+    
+<!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

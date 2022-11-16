@@ -36,6 +36,16 @@ class User:
         else:
             return False
 
+    @classmethod
+    def get_by_id(cls, data):
+        query = "SELECT * FROM users WHERE id = %(id)s"
+        result = connectToMySQL(DATABASE).query_db(query, data)
+        print(result)
+        if len(result) > 0:
+            return User(result[0])
+        else:
+            return False
+
     @staticmethod
     def validate_user(user:dict) -> bool:
         is_valid = True
