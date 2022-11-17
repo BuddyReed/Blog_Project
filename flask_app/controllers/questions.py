@@ -25,7 +25,10 @@ def community():
 def create_question():
     print(request.form)
     if not Question.validate_question(request.form):
-        return redirect('/community/new')
+        return redirect('/community')
+    if "user_id" not in session:
+        flash("Register")
+        return redirect('/thespot')
     #! This calls on the save model in order to save to the database
     Question.save(request.form)
     return redirect('/community')

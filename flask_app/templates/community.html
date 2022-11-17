@@ -38,9 +38,8 @@
                 </div>
             </div>
             <div class=" p-2 mt-4 rounded-3">
-                <h1>Let's Connect! Let's Talk Music Industry!</h1>
                 <h5>Join the community</h5>
-                <div class="container text-end">
+                <div class="container text-start">
                     <a class="btn btn-dark" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Start Convo</a>
                 </div>
             </div>
@@ -50,12 +49,13 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-lg-7 col-md-12 col-sm-12">
+                <h2 class="text-center">Let's Connect! Let's Talk Music Industry!</h2>
                 {% for question in allQuestions%}
                 <div class="container d-flex">
                     <div class="card mt-4 mb-4" style="width: 50rem; height:10rem;">
                         <div class="card-body">
-                            <h6>Posted By: {{question.user.first_name}}</h6>
+                            <h6 class="text-danger">Posted By: {{question.user.first_name}}</h6>
                             <h4 class="card-title">{{question.content}}</h4>
                             {% for comment in question.comments %}
                             <h6 class="card-title">{{comment.user.first_name}}</h6>
@@ -72,10 +72,10 @@
                 </div>
                 {% endfor%}
             </div>
-            <div class="col-4">
+            <div class="col-lg-5 col-md-12 col-sm-12">
                 <h1 class="text-center my-4 fs-3">Featured In Digtal Mag</h1>
                 <div class="d-lg-flex">
-                    <img class="img-fluid" width="200px" src="{{url_for('static', filename='images/Julia.png')}}"
+                    <img class="img-fluid" width="200px" src="{{url_for('static', filename='images/colemag.png')}}"
                         alt="">
                     <div class="ftcontent">
                         <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
@@ -86,12 +86,12 @@
                 </div>
                 <h1 class="text-center my-4 fs-3">The Spot Spotify Playlist</h1>
                 <div class="d-lg-flex">
-                    <img class="img-fluid" width="200px" src="{{url_for('static', filename='images/Julia.png')}}"
+                    <img class="img-fluid" width="200px" src="{{url_for('static', filename='images/spot2.png')}}"
                         alt="">
                     <div class="ftcontent">
                         <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
                         <p class="ms-4">- Get access to our 500k plus email mailing list</p>
-                        <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
+                        <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
                         <a class="btn btn-dark ms-4" href="">Get Added Today</a>
                     </div>
                 </div>

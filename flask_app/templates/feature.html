@@ -1,52 +1,63 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <!-- Featured Artist -->
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <!-- <h1 class='text-start'>All Blog Post</h1> -->
-                <!-- Colunm 1 -->
-                <div class="col-8">
-                    <div class="containe d-flex">
-                        <img src="{{url_for('static', filename='images/lecrae.jpeg')}}" class="me-4 mt-4 img-fluid" width="900px" alt="...">
-                    </div>
-                    <div class="para">
-                        <h2 class="mt-4">Featured Artist</h2>
-                        <h4> Artist Name</h4>
-                        <p class="mt-4 lh-base">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur placeat incidunt exercitationem quisquam error dolore debitis, maxime molestias? Neque saepe itaque hic amet sequi ipsa mollitia fugit error quos!
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur placeat incidunt exercitationem quisquam error dolore debitis, maxime molestias? Neque saepe itaque hic amet sequi ipsa mollitia fugit error quos!
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur placeat incidunt exercitationem quisquam error dolore debitis, maxime molestias? Neque saepe itaque hic amet sequi ipsa mollitia fugit error quos!
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur placeat incidunt exercitationem quisquam error dolore debitis, maxime molestias? Neque saepe itaque hic amet sequi ipsa mollitia fugit error quos!
-                        </p>
+<!-- Featured Artist -->
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- <h1 class='text-start'>All Blog Post</h1> -->
+            <!-- Colunm 1 -->
+            <div class="col-lg-7 col-md-12 col-sm-12">
+                <div class="containe d-flex">
+                    <img src="{{url_for('static', filename='images/lecrae.jpeg')}}" class="me-4 mt-4 img-fluid"
+                        width="900px" alt="...">
+                </div>
+                <div class="para">
+                    <h2 class="mt-4">Featured Artist</h2>
+                    <h4> Artist Name</h4>
+                    <p class="mt-4 lh-base">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur placeat incidunt
+                        exercitationem quisquam error dolore debitis, maxime molestias? Neque saepe itaque hic amet
+                        sequi ipsa mollitia fugit error quos!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur placeat incidunt
+                        exercitationem quisquam error dolore debitis, maxime molestias? Neque saepe itaque hic amet
+                        sequi ipsa mollitia fugit error quos!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur placeat incidunt
+                        exercitationem quisquam error dolore debitis, maxime molestias? Neque saepe itaque hic amet
+                        sequi ipsa mollitia fugit error quos!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequatur placeat incidunt
+                        exercitationem quisquam error dolore debitis, maxime molestias? Neque saepe itaque hic amet
+                        sequi ipsa mollitia fugit error quos!
+                    </p>
+                </div>
+            </div>
+            <!-- Side Colunm  -->
+            <!-- Colunm 2  -->
+            <div class="col-lg-5 col-md-12 col-sm-12">
+                <h1 class="text-center my-4 fs-3">Featured In Digtal Mag</h1>
+                <div class="d-lg-flex">
+                    <img class="img-fluid" width="200px" src="{{url_for('static', filename='images/Julia.png')}}"
+                        alt="">
+                    <div class="ftcontent">
+                        <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
+                        <p class="ms-4">- Get access to our 500k plus email mailing list</p>
+                        <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
+                        <a class="btn btn-dark ms-4" href="">Get Featured</a>
                     </div>
                 </div>
-                <!-- Side Colunm  -->
-                <!-- Colunm 2  -->
-                <div class="col-4">
-                    <h1 class="text-center my-4 fs-3">Featured In Digtal Maga</h1>
-                    <div class="d-lg-flex">
-                        <img class="img-fluid" width="200px" src="{{url_for('static', filename='images/Julia.png')}}" alt="">
-                        <div class="ftcontent">
-                            <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
-                            <p class="ms-4">- Get access to our 500k plus email mailing list</p>
-                            <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
-                            <a class="btn btn-dark ms-4" href="">Get Featured</a>
-                        </div>
-                    </div>
-                    <h1 class="text-center my-4 fs-3">The Spot Spotify Playlist</h1>
-                    <div class="d-lg-flex">
-                        <img class="img-fluid" width="200px" src="{{url_for('static', filename='images/Julia.png')}}" alt="">
-                        <div class="ftcontent">
-                            <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
-                            <p class="ms-4">- Get access to our 500k plus email mailing list</p>
-                            <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
-                            <a class="btn btn-dark ms-4" href="">Get Added Today</a>
-                        </div>
+                <h1 class="text-center my-4 fs-3">The Spot Spotify Playlist</h1>
+                <div class="d-lg-flex">
+                    <img class="img-fluid" width="200px" src="{{url_for('static', filename='images/spot1.png')}}"
+                        alt="">
+                    <div class="ftcontent">
+                        <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
+                        <p class="ms-4">- Get access to our 500k plus email mailing list</p>
+                        <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
+                        <a class="btn btn-dark ms-4" href="">Get Added Today</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    {% endblock content %}
+    </div>
+</section>
+{% endblock content %}

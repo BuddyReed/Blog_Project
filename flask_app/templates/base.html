@@ -41,14 +41,14 @@
                     <li class="nav-item">
                         <a href="/access" class="nav-link"><h5>All Access</h5></a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/thespot" class="nav-link"> <h5>Sign Up</h5></a>
-                    </li>
                     {% if "user_id" is in session %}                        
                     <li class="nav-item">
                         <a href="/logout" class="nav-link"> <h5>Logout</h5></a>
                     </li>
                     {% else %}
+                    <li class="nav-item">
+                        <a href="/thespot" class="nav-link"> <h5>Sign Up</h5></a>
+                    </li>
                     <li class="nav-item">
                         <a href="/thespot" class="nav-link"> <h5>Login</h5></a>
                     </li>
@@ -71,8 +71,17 @@
     {% block playlist %}
     {% endblock playlist %}
     <!-- Submit Music -->
-    {% block submit %}
-    {% endblock submit %}
+    <section class="bg-dark text-light p-5 mt-4">
+        <div class="container">
+            <div class="d-md-flex justify-content-between algin-items-center">
+                <h3 class="md-3 mb-md-0">Sign Up For Our Newsletter</h3>
+                <div class="input-group news-input">
+                    <input type="text" class="form-control" placeholder="Enter Email">
+                    <button class="btn btn-danger btn-lg" type="button" id="button-addon2">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
     
     
     

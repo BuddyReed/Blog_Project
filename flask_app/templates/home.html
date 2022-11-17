@@ -2,16 +2,18 @@
 
 {% block content %}
 <div class="container-fluid mt-4">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{url_for('static', filename='images/Welcome.png')}}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{url_for('static', filename='images/Playlist.png')}}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="{{url_for('static', filename='images/Welcome.png')}}" class="d-block w-100" alt="...">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{url_for('static', filename='images/Welcome.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='images/Playlist.png')}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='images/Welcome.png')}}" class="d-block w-100" alt="...">
+                </div>
             </div>
         </div>
     </div>
@@ -23,52 +25,59 @@
 <h1 class=" bg-dark text-light text-center mt-4 p-3">Featured Artist</h1>
 <section class="p-3">
     <div class="container">
-        <div class="row text-center g-4">
-            <div class="col">
-                <div class="card bg-dark text-light" style="width: 18rem;">
-                    <img class="Boximg" src="{{url_for('static', filename='images/Lecrae.png')}}" class="card-img-top"
-                        alt="...">
-                    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 align-items-stretch mb-3">
+                <div class="card bg-dark text-light">
+                    <img class="Boximg card-img-top" src="{{url_for('static', filename='images/Lecrae.png')}}"
+                        class="card-img-top" alt="...">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Lecrae</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/feature" class="btn btn-danger">Artist Interview</a>
+                        <p class="card-text">Lecrae released a recent album call Church Clothes 4. We get details on his
+                            process of completeing his new ablum and what each song mean to him.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/feature" class="btn btn-danger w-100 mb-3">Artist Interview</a>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card bg-dark text-light" style="width: 18rem;">
-                    <img class="card-img-top" src="{{url_for('static', filename='images/bruno.png')}}"
-                        alt="...">
-                    <div class="card-body">
+            <div class="col-lg-3 col-md-6 col-sm-6 align-items-stretch mb-3">
+                <div class="card bg-dark text-light h-100">
+                    <img class="card-img-top" src="{{url_for('static', filename='images/bruno.png')}}" alt="...">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Bruno</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/feature2" class="btn btn-danger">Artist Interview</a>
+                        <p class="card-text">Bruno talks about his journey in the music industry. How he got his start
+                            as a song writer. But always new he would become the start he is today.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/feature2" class="btn btn-danger w-100 mb-3">Artist Interview</a>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card bg-dark text-light" style="width: 18rem;">
-                    <img class="Boximg" src="{{url_for('static', filename='images/nayeon.png')}}" class="card-img-top"
-                        alt="...">
-                    <div class="card-body">
+            <div class="col-lg-3 col-md-6 col-sm-6 align-items-stretch mb-3">
+                <div class="card bg-dark text-light">
+                    <img class="Boximg card-img-top" src="{{url_for('static', filename='images/nayeon.png')}}"
+                        class="card-img-top" alt="...">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Nayeon</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/feature3" class="btn btn-danger">Artist Interview</a>
+                        <p class="card-text">Nayeon loves being apart of the famous group Twice. Stepping out on her
+                            solo jounrney has been diffcult. But she is happy to embrace the journey.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/feature3" class="btn btn-danger w-100 mb-3">Artist Interview</a>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card bg-dark text-light" style="width: 18rem;">
-                    <img class="card-img-top" src="{{url_for('static', filename='images/Ava.png')}}"
-                        alt="...">
-                    <div class="card-body">
+            <div class="col-lg-3 col-md-6 col-sm-6 align-items-stretch mb-3">
+                <div class="card bg-dark text-light">
+                    <img class="card-img-top" src="{{url_for('static', filename='images/Ava.png')}}" alt="...">
+                    <div class="card-body text-center">
                         <h5 class="card-title">Ava Max</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="/feature4" class="btn btn-danger">Artist Interview</a>
+                        <p class="card-text">Ava opens up about her new album that is set to be released top of 2023.
+                            She had to work with producers and writer she always dreamed of working with.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/feature4" class="btn btn-danger w-100 mb-3">Artist Interview</a>
+
                     </div>
                 </div>
             </div>
@@ -82,91 +91,112 @@
 <section class="p-4">
     <div class="container mt-4">
         <div class="row">
-            <div class="col-5 first">
+            <div class="col-lg-5 col-md-12 col-sm-12 first">
                 <h1 class="text-center">Latest Blog</h1>
-                <div class="card mb-3 top" style="max-width: 540px;">
+                <!-- card 1  -->
+                <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{url_for('static', filename='images/usher.png')}}" class="img-fluid round start p-2 mt-2"
-                                width="300px" alt="...">
+                            <img src="{{url_for('static', filename='images/usher.png')}}" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body" style="height: 12rem;">
-                                <h5 class="card-title">Making History With Usher</h5>
-                                <p class="card-text">Usher talks about his long genvity in the music industry .</p>
-                                <a href="#" class="btn btn-danger">Access Blog</a>
-                                <p class="card-text"><small class="text-muted"></small>
-                                </p>
+                            <div class="card-body">
+                                <a class="text-dark" href="">
+                                    <h5 class="card-title">Making History With Usher</h5>
+                                </a>
+                                    
+                                <p class="card-text">Usher talks about his longevity in the music industry. The ups and
+                                    downs of his career.</p>
+                                <a class="btn btn-danger" href="#"> Access Blog</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3 btm" style="max-width: 540px;">
+                <!-- card 2  -->
+                <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{url_for('static', filename='images/baby.png')}}" class="img-fluid" alt="...">
+                            <img src="{{url_for('static', filename='images/baby.png')}}" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body" style="height: 12rem;">
-                                <h5 class="card-title">Hit After Hit Record</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <a href="#" class="btn btn-danger">Access Blog</a>
-                                <p class="card-text"><small class="text-muted"></small>
-                                </p>
+                            <div class="card-body">
+                                <a class="text-dark" href="">
+                                    <h5 class="card-title">Hit After Hit Record</h5>
+                                </a>
+                                    
+                                <p class="card-text">Babyface has been making hit records for decades. He recently
+                                    release a new ablum. We learn why he still loves makiing music.</p>
+                                <a class="btn btn-danger" href="#"> Access Blog</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Mag Cover  -->
-            <div class="col-7">
+            <div class="col-lg-7 col-md-12 col-sm-12">
                 <h1 class="text-center">Featured In Digtal Mag</h1>
-                <div class="d-lg-flex">
-                    <img class="img-fluid" width="371px" src="{{url_for('static', filename='images/Julia.png')}}"
-                        alt="">
-                    <div class="ftcontent">
-                        <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
-                        <p class="ms-4">- Get access to our 500k plus email mailing list</p>
-                        <p class="ms-4">- Get featured on the cover of our Digital Maga</p>
-                        <a class="btn btn-danger ms-4" href="/access">Get Featured</a>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <!-- <img class="img-fluid" width="371px" src="{{url_for('static', filename='images/Julia.png')}}"
+                                alt=""> -->
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{{url_for('static', filename='images/Julia.png')}}"
+                                        class="d-block w-100 img-fluid" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{url_for('static', filename='images/week.png')}}"
+                                        class="d-block w-100 img-fluid" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{url_for('static', filename='images/colemag.png')}}"
+                                        class="d-block w-100 img-fluid" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="ftcontent">
+                            <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
+                            <p class="ms-4">- Get access to our 500k plus email mailing list</p>
+                            <p class="ms-4">- Get featured on the cover of our Digital Mag</p>
+                            <a class="btn btn-danger ms-4" href="/access">Get Featured</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
-    </div>
 </section>
 {% endblock latest %}
 
 {% block playlist %}
 <h2 class="text-center bg-dark text-light p-3 ">The Spot Playlist</h2>
 <section>
-    <div class="container p-4"> 
-        <div class="row">
-
-            <div class="col g-4">
-                <div class="topphoto">
-                        <img class="img-fluid" width="300px" 
-                            src="{{url_for('static', filename='images/andy.png')}}" alt="">
-                        <img class=" img-fluid" width="300px" 
-                            src="{{url_for('static', filename='images/justin.png')}}" alt="">
-                        <img class="img-fluid" width="300px" 
-                            src="{{url_for('static', filename='images/chris.png')}}" alt="">
-                </div>
-                <div class="col">
-                    <div class="btnphoto mt-4 overlay">
-                        <img class=" img-fluid" width="300px" 
-                            src="{{url_for('static', filename='images/cole.png')}}" alt="">
-                        <img class=" img-fluid" width="300px" 
-                            src="{{url_for('static', filename='images/twice.png')}}" alt="">
-                        <img class="img-fluid rgba-black-strong" width="300px" 
-                            src="{{url_for('static', filename='images/wiz.png')}}" alt="">
-                    </div>
-                </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-12 colsm-12 g-4">
+                <img class="img-fluid" width="300px" src="{{url_for('static', filename='images/andy.png')}}" alt="">
             </div>
-            <!-- <div class="col">
-                    <h2 class="text-center bg-dark text-light p-3 ">Submit Music</h2>
-                </div> -->
+            <div class="col-lg-4 col-md-12 colsm-12 g-4">
+                <img class=" img-fluid" width="300px" src="{{url_for('static', filename='images/justin.png')}}" alt="">
+            </div>
+            <div class="col-lg-4 col-md-12 colsm-12 g-4">
+                <img class="img-fluid" width="300px" src="{{url_for('static', filename='images/chris.png')}}" alt="">
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-12 colsm-12 g-4">
+                <img class=" img-fluid" width="300px" src="{{url_for('static', filename='images/cole.png')}}" alt="">
+            </div>
+            <div class="col-lg-4 col-md-12 colsm-12 g-4">
+                <img class=" img-fluid" width="300px" src="{{url_for('static', filename='images/twice.png')}}" alt="">
+            </div>
+            <div class="col-lg-4 col-md-12 colsm-12 g-4">
+                <img class="img-fluid rgba-black-strong" width="300px"
+                    src="{{url_for('static', filename='images/wiz.png')}}" alt="">
+            </div>
         </div>
     </div>
 </section>

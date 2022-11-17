@@ -50,11 +50,16 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <div class="row">
+            <h1></h1>
+        </div>
+    </div>
     <!-- Registration form  -->
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3>Register</h3>
+                <h3>New User Register Today!</h3>
                 {% with messages = get_flashed_messages() %}    
                 {% if messages %}                        
                     {% for message in messages %}     
@@ -88,7 +93,6 @@
             </div>
             <div class="col">
                 <h3>Login</h3>
-
                 {% with messages = get_flashed_messages() %}    
                 {% if messages %}                        
                     {% for message in messages %}     
