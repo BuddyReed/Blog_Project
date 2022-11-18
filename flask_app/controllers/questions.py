@@ -28,7 +28,7 @@ def create_question():
         return redirect('/community')
     if "user_id" not in session:
         flash("Register")
-        return redirect('/thespot')
+        return redirect('/community')
     #! This calls on the save model in order to save to the database
     Question.save(request.form)
     return redirect('/community')
@@ -36,10 +36,18 @@ def create_question():
 @app.route("/community/comment", methods=['POST'])
 def create_comment():
     print(request.form)
-    # if not Comment.validate_Comment(request.form):
-    #     return redirect('/community')
+    if not Comment.validate_comment(request.form):
+        return redirect('/community')
     #! This calls on the save model in order to save to the database
     Comment.save(request.form)
+    return redirect('/community')
+
+# DELETE COMMENT 
+
+@app.route('/comments/delete/<int:id>')
+def delete_question(id):
+    data = {"id" : id}
+    Comment.destory(data)
     return redirect('/community')
 
 
@@ -74,6 +82,8 @@ def feature3():
 @app.route('/feature4')
 def feature4():
     return render_template('feature4.html')
+
+
 
 
 

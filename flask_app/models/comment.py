@@ -51,8 +51,8 @@ class Comment:
     def validate_comment(comment):
         print(type(comment['content']))
         is_valid = True 
-        if len(comment['content']) < 10:
-            flash('Description must be at least 3 chararacters')
+        if len(comment['content']) < 1:
+            flash('Comment must be at least  chararacters')
             is_valid = False
         return is_valid
 

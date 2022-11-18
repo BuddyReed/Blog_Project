@@ -38,10 +38,10 @@
                     <li class="nav-item">
                         <a href="/community" class="nav-link"><h5>Artist Community</h5></a>
                     </li>
+                    {% if "user_id" is in session %}                        
                     <li class="nav-item">
                         <a href="/access" class="nav-link"><h5>All Access</h5></a>
                     </li>
-                    {% if "user_id" is in session %}                        
                     <li class="nav-item">
                         <a href="/logout" class="nav-link"> <h5>Logout</h5></a>
                     </li>

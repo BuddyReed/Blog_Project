@@ -97,14 +97,15 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{url_for('static', filename='images/usher.png')}}" class="img-fluid rounded-start" alt="...">
+                            <img src="{{url_for('static', filename='images/usher.png')}}"
+                                class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <a class="text-dark" href="">
                                     <h5 class="card-title">Making History With Usher</h5>
                                 </a>
-                                    
+
                                 <p class="card-text">Usher talks about his longevity in the music industry. The ups and
                                     downs of his career.</p>
                                 <a class="btn btn-danger" href="#"> Access Blog</a>
@@ -116,14 +117,15 @@
                 <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="{{url_for('static', filename='images/baby.png')}}" class="img-fluid rounded-start" alt="...">
+                            <img src="{{url_for('static', filename='images/baby.png')}}" class="img-fluid rounded-start"
+                                alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <a class="text-dark" href="">
                                     <h5 class="card-title">Hit After Hit Record</h5>
                                 </a>
-                                    
+
                                 <p class="card-text">Babyface has been making hit records for decades. He recently
                                     release a new ablum. We learn why he still loves makiing music.</p>
                                 <a class="btn btn-danger" href="#"> Access Blog</a>
@@ -177,7 +179,12 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-4 col-md-12 colsm-12 g-4">
-                <img class="img-fluid" width="300px" src="{{url_for('static', filename='images/andy.png')}}" alt="">
+                <div class="bg-image hover-overlay">
+                    <a href="https://open.spotify.com/playlist/6v1KmFvmH2qfsL5kwp9ZND?si=a0b4de7de42c43fa">
+                        <img class="img-fluid" width="300px" src="{{url_for('static', filename='images/andy.png')}}"
+                            alt="">
+                    </a>
+                </div>
             </div>
             <div class="col-lg-4 col-md-12 colsm-12 g-4">
                 <img class=" img-fluid" width="300px" src="{{url_for('static', filename='images/justin.png')}}" alt="">
@@ -200,6 +207,7 @@
         </div>
     </div>
 </section>
+
 {% endblock playlist %}
 
 {% block submit %}

@@ -38,9 +38,11 @@
                 </div>
             </div>
             <div class=" p-2 mt-4 rounded-3">
-                <h5>Join the community</h5>
                 <div class="container text-start">
+                    {% if "user_id" is in session %} 
                     <a class="btn btn-dark" href="#" data-bs-toggle="modal" data-bs-target="#myModal">Start Convo</a>
+                    {% else %}
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -51,27 +53,45 @@
         <div class="row">
             <div class="col-lg-7 col-md-12 col-sm-12">
                 <h2 class="text-center">Let's Connect! Let's Talk Music Industry!</h2>
+                <h5 class="text-center">Join and interact with our Artist Community</h5>
                 {% for question in allQuestions%}
                 <div class="container d-flex">
-                    <div class="card mt-4 mb-4" style="width: 50rem; height:10rem;">
+                    <div class="card mt-4 mb-4" style="width: 50rem;">
                         <div class="card-body">
                             <h6 class="text-danger">Posted By: {{question.user.first_name}}</h6>
                             <h4 class="card-title">{{question.content}}</h4>
-                            {% for comment in question.comments %}
-                            <h6 class="card-title">{{comment.user.first_name}}</h6>
-                            <h6 class="subtitle">{{comment.content}}</h6>
-                            {% endfor %}
-                        </div>
-                            <form action="/community/comment", method="POST">
-                                <input type="text" name="content">
+                            <form action="/community/comment" , method="POST">
+                                <div class="div">
+                                    <textarea class="mx-1" name="content" id="" cols="45" rows="2" placeholder="Join The Conversation!"></textarea>
+                                    <!-- <input type="text" name="content"> -->
+                                </div>
                                 <input type="hidden" name='user_id' value="{{session.user_id}}">
                                 <input type="hidden" name='question_id' value="{{question.id}}">
-                                <input type="submit" value="Comment" class="btn btn-dark">
+                                <div class="div">
+                                    <!-- flash message -->
+
+                                    {% if "user_id" is in session %} 
+                                    <input type="submit" value="Comment" class="btn btn-dark btn-sm mx-2">
+                                    {% else %}
+                                    {% endif %}
+                                </div>
                             </form>
+                            {% for comment in question.comments %}
+                            <div class="pic d-flex justify-content-start align-items-center">
+                                <img class="img-fluid rounded-circle" width="50px"  src="{{url_for('static', filename='images/black_logo.png')}}" alt="">
+                                <h6 class="card-title mt-2">{{comment.user.first_name}}</h6>
+                            </div>
+                            
+                            <h6 class="subtitle ms-4">{{comment.content}}</h6>
+                            <a class="btn btn-transparent fs-6 ms-4" href="/comments/delete/{{comment.id}}">Delete</a>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
                 {% endfor%}
             </div>
+            
+            <!-- Feature and Playlit Col  -->
             <div class="col-lg-5 col-md-12 col-sm-12">
                 <h1 class="text-center my-4 fs-3">Featured In Digtal Mag</h1>
                 <div class="d-lg-flex">

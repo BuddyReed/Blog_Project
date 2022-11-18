@@ -4,6 +4,10 @@ from flask_app.models.question import Question
 
 
 
+@classmethod
+def destory(cls, data):
+    query = 'DELETE FROM comments WHERE id = %(id)s'
+    return connectToMySQL(DATABASE).query_db(query, data)
 
 
 
